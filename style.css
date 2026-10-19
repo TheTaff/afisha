@@ -5,13 +5,18 @@
   box-sizing: border-box;
 }
 
+:root {
+  --accent:#0bb18f;
+  --dark: #1b1b1b;
+  --bg-gray: #e2e2e2;
+}
+
 body {
   font-family: 'Fira Sans', sans-serif; 
   font-size: 16px;
-  color: #1b1b1b;
+  color: var(--dark);
   background: #eeeeee;                  
 }
-
 
 h1, h2, h3, h4 {
   font-family: 'Cormorant Garamond', serif;
@@ -78,7 +83,6 @@ img {
   transform: translateY(-50%) rotate(45deg);
 }
 
-/* У последнего пункта ромбик не нужен */
 .menu a:last-child::after {
   display: none;
 }
@@ -220,14 +224,13 @@ img {
 
 .button {
   padding: 15px 30px;
-  background: #0bb18f;
+  background: var(--accent);
   color: #fff;
   font-weight: 600;
   font-size: 15px;
-  border-radius: 30px; /* сильное скругление = "таблетка" */
+  border-radius: 30px; 
 }
 
-/* При наведении кнопка чуть темнеет */
 .button:hover {
   background: #099a7c;
 }
@@ -286,7 +289,7 @@ img {
   height: 300px;
   padding: 24px;
   display: flex;
-  align-items: flex-end; /* прижимаем текст к низу */
+  align-items: flex-end; 
   background: #5a1a22 url("image/tours.jpg") center / cover;
   color: #fff;
 }
@@ -321,13 +324,12 @@ img {
   height: 48px;
   border: none;
   border-radius: 4px;
-  background: #0bb18f;
+  background: var(--accent);
   color: #fff;
   font-size: 22px;
   cursor: pointer;
 }
 
-/* Сетка дней: 7 колонок по 40px */
 .calendar__days {
   display: grid;
   grid-template-columns: repeat(7, 40px);
@@ -338,6 +340,7 @@ img {
   height: 40px;
   display: flex;
   justify-content: center;
+  border-radius: 4px;
   align-items: center;
   background: #a9a9a9;
   color: #fff;
@@ -360,7 +363,6 @@ img {
   gap: 28px;
 }
 
-/* Зелёный квадрат с датой */
 .announcement__date {
   width: 100px;
   height: 100px;
@@ -401,10 +403,6 @@ img {
   justify-content: space-between;
 }
 
-.footer__columns > * {
-  width: 33%;
-}
-
 .footer h4 {
   font-size: 22px;
   margin-bottom: 30px;
@@ -421,6 +419,10 @@ img {
   font-size: 15px;
 }
 
+.footer__col {
+  width: 33%;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -431,4 +433,11 @@ img {
   border-top: 1px solid #555;
   text-align: center;
   color: #888;
+}
+
+@media (max-width: 1320px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
 }
