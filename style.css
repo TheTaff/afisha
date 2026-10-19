@@ -1,0 +1,434 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Sans', sans-serif; 
+  font-size: 16px;
+  color: #1b1b1b;
+  background: #eeeeee;                  
+}
+
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+}
+
+.container {
+  width: 1296px;
+  margin: 0 auto;
+}
+
+.section {
+  margin-top: 120px;
+}
+
+.header {
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.header__inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase; 
+}
+
+.menu {
+  display: flex;
+  gap: 40px; 
+}
+
+.menu a {
+  font-weight: 600;
+  font-size: 15px;
+  position: relative; 
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  right: -23px;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+/* У последнего пункта ромбик не нужен */
+.menu a:last-child::after {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  gap: 24px;
+  margin-top: 45px;
+}
+
+.slider__main {
+  width: 856px;
+  height: 497px;
+  border-radius: 12px;
+}
+
+.slider__thumbs {
+  width: 416px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.thumb {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 12px;
+  background: #e2e2e2;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.thumb img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+.section__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.section__title {
+  font-size: 48px;
+}
+
+.all-link {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.all-link img {
+  width: 36px;
+  height: 36px;
+}
+
+
+.poster {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  padding: 32px 56px;
+  background: #e2e2e2;
+  border-radius: 12px;
+  margin-bottom: 80px;
+}
+
+.poster:last-child {
+  margin-bottom: 0;
+}
+
+.poster__date {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Cormorant Garamond', serif;
+  color: #555;
+}
+
+.poster__date b {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.poster__date span {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.poster__img {
+  width: 320px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+.poster__info {
+  flex: 1;
+}
+
+.poster__info h3 {
+  font-size: 30px;
+  margin-bottom: 16px;
+  max-width: 420px;
+}
+
+.poster__info p {
+  font-size: 15px;
+  color: #6b6b6b;
+  margin-bottom: 30px;
+  max-width: 420px;
+}
+
+.poster__tags {
+  display: flex;
+  gap: 30px;
+  font-size: 15px;
+}
+
+.poster__tags span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.poster__tags img {
+  width: 24px;
+  height: 24px;
+}
+
+.button {
+  padding: 15px 30px;
+  background: #0bb18f;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 30px; /* сильное скругление = "таблетка" */
+}
+
+/* При наведении кнопка чуть темнеет */
+.button:hover {
+  background: #099a7c;
+}
+
+
+.news-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.news {
+  width: 636px;
+}
+
+.news .section__title {
+  margin-bottom: 70px;
+}
+
+.news__list {
+  display: flex;
+  gap: 24px;
+}
+
+.news__item {
+  width: 306px;
+}
+
+.news__item img {
+  width: 306px;
+  height: 204px;
+  border-radius: 8px;
+  margin-bottom: 36px;
+}
+
+.news__item h3 {
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+
+.news__item p {
+  font-size: 14px;
+  color: #6b6b6b;
+  line-height: 1.5;
+}
+
+
+.calendar {
+  width: 526px;
+  background: #e2e2e2;
+  border-radius: 12px;
+  overflow: hidden; 
+}
+
+.calendar__top {
+  height: 300px;
+  padding: 24px;
+  display: flex;
+  align-items: flex-end; /* прижимаем текст к низу */
+  background: #5a1a22 url("image/tours.jpg") center / cover;
+  color: #fff;
+}
+
+.calendar__top h3 {
+  font-size: 30px;
+}
+
+.calendar__body {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.calendar__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.calendar__left h4 {
+  font-size: 30px;
+}
+
+.calendar__arrows {
+  display: flex;
+  gap: 8px;
+}
+
+.calendar__arrows button {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 4px;
+  background: #0bb18f;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+/* Сетка дней: 7 колонок по 40px */
+.calendar__days {
+  display: grid;
+  grid-template-columns: repeat(7, 40px);
+  gap: 4px;
+}
+
+.calendar__days span {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #a9a9a9;
+  color: #fff;
+  font-size: 14px;
+}
+
+.calendar__days .green {
+  background: #0bb18f;
+}
+
+
+.announcement {
+  display: flex;
+  justify-content: space-between;
+}
+
+.announcement__item {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+/* Зелёный квадрат с датой */
+.announcement__date {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0bb18f;
+  color: #fff;
+  border-radius: 8px;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+.announcement__date b {
+  font-size: 32px;
+  line-height: 1;
+}
+
+.announcement__date span {
+  font-size: 16px;
+}
+
+.announcement__item p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer {
+  margin-top: 150px;
+  padding: 80px 0 40px;
+  background: #1b1b1b;
+  color: #fff;
+}
+
+.footer__columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__columns > * {
+  width: 33%;
+}
+
+.footer h4 {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.footer p {
+  font-size: 15px;
+  margin-bottom: 22px;
+}
+
+.footer__links {
+  display: flex;
+  gap: 24px;
+  font-size: 15px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.footer__copy {
+  margin-top: 60px;
+  padding-top: 30px;
+  border-top: 1px solid #555;
+  text-align: center;
+  color: #888;
+}
