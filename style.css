@@ -435,6 +435,92 @@ img {
   color: #888;
 }
 
+.page-title {
+  text-align: center;
+  font-size: 48px;
+  margin: 60px 0 100px;
+}
+
+.event {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.event__poster {
+  width: 526px;
+  height: 742px;
+  border-radius: 12px;
+}
+
+.event__info {
+  width: 635px;
+}
+
+.event__block {
+  margin-bottom: 40px;
+}
+
+.event__block h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.event__block p {
+  font-size: 15px;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.event__info .button {
+  display: inline-block;
+}
+
+.event__gallery {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.event__gallery img {
+  width: 305px;
+  height: 210px;
+  border-radius: 12px;
+}
+
+.contacts {
+  width: 963px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.contacts__col {
+  width: 50%;
+}
+
+.contacts__block {
+  margin-bottom: 40px;
+}
+
+.contacts__block h3 {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+
+.contacts__block p {
+  font-size: 15px;
+  margin-bottom: 14px;
+}
+
+.map {
+  display: block;
+  width: 856px;
+  height: 441px;
+  margin: 60px auto 0;
+  border: none;
+  border-radius: 12px;
+}
+
 @media (max-width: 1320px) {
   .container {
     width: 100%;
